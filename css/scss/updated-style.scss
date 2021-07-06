@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+// 반응형 미디어쿼리 변수
+/*SCSS*/
+$break-mobile: 480px;
+$break-small: 768px;
+$break-medium: 960px;
+$break-large: 1024px;
+$break-medium-large: 1280px;
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: $break-mobile) {
+            @content;
+        }
+    } @else if $media == small {
+        @media only screen and (max-width: $break-small) {
+            @content;
+            }
+    } @else if $media == medium {
+        @media only screen and (max-width: $break-medium) {
+            @content;
+        }
+    } @else if $media == large {
+        @media only screen and (max-width: $break-large) {
+            @content;
+        }
+    } @else if $media == medium-large {
+        @media only screen and (max-width: $break-medium-large) {
+            @content;
+        }
+    }
+}
+
+header {
+    // 기존 메뉴 반응형 수정
+    .inner_header {
+        @include respond-to(medium) {
+            display: none;
+        }
+
+        @include respond-to(medium-large) {
+            .logo {
+                margin-right: 35px;
+            }
+            .search_wrap .search input {
+                width: 100px;
+            }
+            .icon_wrap .icon:first-child > a {
+                padding: 0 5px;
+            }
+        }
+
+        @include respond-to(large) {
+            .nav .menu div > a {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    div ul.submenu li.classic a {
+        background-color: #463d33;
+        color: #fff;
+        font-weight:bold;
+    }
+
+    // 모바일 메뉴 추가 CSS
+    .mobile_header {
+        display: none;
+        @include respond-to(medium) {
+            display: flex;
+        }
+        padding: 20px 30px;
+        align-items: center;
+        justify-content: space-between;
+
+        .menu_trigger {
+            display: inline-block;
+            transition: all 0.4s;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 10;
+            cursor: pointer;
+            span {
+                display: inline-block;
+                transition: all 0.4s;
+                box-sizing: border-box;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                border-radius: 0;
+                &:nth-of-type(1) {
+                    top: 0;
+                }
+                &:nth-of-type(2) {
+                    top: 9px;
+                }
+                &:nth-of-type(3) {
+                    bottom: 0;
+                }
+            }
+            &.active {
+                span:nth-of-type(1) {
+                    transform: translateY(9px) rotate(-135deg);
+                }
+                span:nth-of-type(2) {
+                    opacity: 0;
+                }
+                span:nth-of-type(3) {
+                    transform: translateY(-9px) rotate(135deg);
+                }
+            }
+        }
+
+    }
+    /* The side navigation menu */
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 9; /* Stay on top */
+        top: 0; /* Stay at the top */
+        right: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+        > div {
+            &.current {
+                > a {
+                    background-color: #d2362f;
+                }
+
+                .submenu {
+                    background-color: #292929;
+                }
+            }
+            > a {
+                font-size: 18px;
+                color: #fff;
+                display: flex;
+                padding: 15px 20px;
+                font-weight: bold;
+                border-top: 1px solid #333;
+                border-bottom: 1px solid #333;
+            }
+        }
+        .submenu {
+            padding:10px 0;
+            margin:0;
+            
+            li {
+                list-style: none;
+                /* The navigation menu links */
+                
+                a {
+                    padding: 12px 8px 12px 32px;
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: #808080;
+                    display: block;
+                    transition: 0.3s;
+                    /* When you mouse over the navigation links, change their color */
+                    &:hover {
+                        color: #f1f1f1;
+                    }
+                }
+            }
+        }
+
+        
+        /* Position and style the close button (top right corner) */
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .search_wrap .icon_wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+            .icon {
+                display: flex;
+                a {
+                    padding: 20px;
+                }
+                .fa {
+                    font-size: 21px;
+                }
+                .search {
+                    margin-top: 10px;
+                    input {
+                        width:auto;
+                    }
+                }
+            }
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @include respond-to(mobile) {
+            padding-top: 15px;
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    .page_wrap {
+        transition: margin-left 0.5s;
+        padding: 20px;
+    }
+
+    // 배경 Overay
+    #myCanvasNav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0, 0.9);
+        overflow-y: auto;
+        overflow-x: hidden;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 1s;
+
+    }
+}
+
+// 슬라이드 버튼 CSS 수정
+body.sketchup-pro .slider_wrap .slider01 .point_btn, body.sketchup-pro .slider_wrap .slider02 .point_btn {
+    align-items: center;
+}
+
+////////////// 2021 SketchUp Brand Update
+// New Brand Color
+$colorNew:#005f9e;
+$colorNewHover:#00426d;
+
+body.products_list, body.single.page, body.sketchup-pro, body.single.product_detail, body.cart {
+
+    div, a, li, p, h1, h2, h3, h4, h5, h6, button, span, input, td, label, b, strong {
+        font-family: 'Lato', 'Noto Sans KR', sans-serif !important;
+    }
+
+    .slider_wrap .point_btn, .swiper-wrapper+.swiper-pagination span[class*="active"], .swiper-pagination-bullet-active, .btn_grp div.payment, header .nav nav.menu div.current {
+        background-color:$colorNew !important;
+    }
+    header .nav nav.menu div.current:hover {
+        background-color:#fff !important;
+    }
+    .btn_grp div.payment:hover {
+        background-color:$colorNewHover;
+    }
+    header .nav nav.menu div.current:hover>a, header .nav nav.menu div:hover, header .nav nav.menu div.current:hover {
+        color:$colorNew;
+    }
+    .page_license_wrap {
+        .text_wrap_bg .text_container p .point_color {
+            color:$colorNew;
+        }
+        .module_wrap.btn_container .point_btn {
+            background-color:$colorNew !important;
+        }
+    }
+    .grid_container.products {
+        .module_wrap {
+            .image_container {
+                height: auto;
+            }
+        }
+    }
+    .module_wrap {
+        .image_container {
+            height: auto;
+        }
+        .transparent, .content_wrap {
+            .price_wrap {
+                color:$colorNew;
+                &:before {
+                    background-color:$colorNew;
+                }
+            }
+        }
+    }
+    // 장바구니/카트
+    .page_content {
+        .price i, .integrated-total_price>div:last-child i {
+            color:$colorNew;
+        }
+    }
+    .page_wrap .pop_container .btnInsertOrder {
+        background:$colorNew;
+    }
+    // 추천페이지
+    article.page_recommend_wrap {
+        .row_container.check_cart_wrap {
+            .check_cart .btn_check_cart {
+                background-color:$colorNew;
+            }
+        }
+        .products_wrap.row_container {
+            li .price {
+                color:$colorNew;
+            }
+            .btn_wrap {
+                .btn_cart {
+                    background-color:$colorNew;
+                    &:hover {
+                        background-color:$colorNewHover;
+                    }
+                }
+                .btn_detail_pop:hover {
+                    background-color:$colorNew;
+                }
+            }
+        }
+        .popup_recommend .pop_container .pop_title h2 p span {
+            color:$colorNew;
+        }
+    }
+}
+
+// HOme
+body.archive.products_list {
+    .module_wrap{
+        &:hover .thumbnail {
+            width: auto;
+        }
+        .image_container .thumbnail {
+            width: auto;
+            max-height: 320px;
+        }
+    }
+}
+
+// 상품 상세페이지
+html .single.product_detail .container {
+    .product_wrap.container_inner {
+        max-width: 1000px;
+        padding: 0px;
+        .image_wrap.row_container {
+            justify-content: space-between;
+            .col_container.col_1_2 {
+                &:first-child {
+                    max-width: 410px;
+                }
+                &:last-child {
+                    max-width: 560px;
+                    width: 100%;
+                }
+            }
+        }
+        div.image_container {
+            align-items: flex-start;
+            justify-content: flex-start;
+            .thumbnail {
+                width: auto;
+                max-width: 410px;
+            }
+        }
+        .pd_title h1 {
+            line-height: 1.2em;
+            font-family: 'Lato', 'Noto Sans KR', sans-serif;
+        }
+        .detail_info_container img {
+            width: auto;
+        }
+        div.options {
+            margin: 40px 0;
+            ul.info li {
+                margin-top: 0;
+            }
+            ul.years li .option {
+                height: 46px;
+            }
+        }
+    }
+}
+
+// 라이선스 정책 페이지
+body.single.page .page_license_wrap .module_wrap.btn_container .point_btn {
+    padding: 15px 30px;
+}
+
+//////////////.2021 SketchUp Brand Update
