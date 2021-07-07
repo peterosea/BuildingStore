@@ -1,0 +1,99 @@
+body.sketchup-pro {
+  .slider_wrap {
+    // 슬라이드 버튼 CSS 수정
+    .slider01 .point_btn,
+    .slider02 .point_btn {
+      align-items: center;
+    }
+  }
+  .page_title h2 {
+    margin-bottom: 0;
+  }
+  //Extensions Section
+  section.container {
+    &.product_list,
+    &.class_list {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      @include respond-to(medium) {
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+    }
+    &.promotion {
+      @include respond-to(medium) {
+        padding-top: 80px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  section.container.product_list {
+    .row_container.row_3col {
+      @include respond-to(small) {
+        margin-bottom: 0;
+      }
+    }
+    .image_container {
+      .thumbnail {
+        @include respond-to(small) {
+          max-height: unset;
+        }
+      }
+    }
+  }
+  section.container.class_list {
+    border-top: 1px solid #e9e9e9;
+    .row_container.row_3col {
+      margin-bottom: 60px;
+      @include respond-to(small) {
+        margin-bottom: 0;
+      }
+    }
+    .image_container {
+      border: none;
+      .thumbnail {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+      }
+    }
+    .content_wrap {
+      height: auto;
+      border: none;
+      padding: 40px 0 0;
+      .name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .excerpt {
+        font-size: 14px;
+        color: #888;
+        line-height: 1.5;
+        min-height: 90px;
+        @include respond-to(small) {
+          min-height: auto;
+        }
+      }
+      .detail_wrap {
+        > * {
+          color: #888;
+        }
+      }
+      .price_wrap {
+        margin-top: 30px;
+      }
+    }
+    .detail_wrap {
+      display: flex;
+    }
+    .level {
+      display: flex;
+      padding-right: 12px;
+      border-right: 1px solid #ccc;
+      margin-right: 12px;
+      ._name {
+        padding-left: 8px;
+      }
+    }
+  }
+}

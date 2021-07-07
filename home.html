@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빌딩포인트코리아 - 스토어</title>
+
+  <script src="https://store.buildingpoint.co.kr/js/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script src="https://store.buildingpoint.co.kr/js/jquery/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+  <link href="https://store.buildingpoint.co.kr/js/jquery/jquery-ui-1.12.1.min.css" rel="stylesheet" type="text/css">
+  <script src="https://store.buildingpoint.co.kr/js/jquery/jquery.easing.1.3.js" type="text/javascript"></script>
+  <!-- font-awesome-5.8.1 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Noto%20Sans%20KR%3A300%2C400%2C700%7COpen%20Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800%7CNoto%20Sans%3Ainherit%2C400%7CDosis%3Ainherit%2C400&amp;subset=">
+  <script src="https://store.buildingpoint.co.kr/js/common.js?v=1.92" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="https://store.buildingpoint.co.kr/css/style.min.css">
+  <link rel="stylesheet" href="https://store.buildingpoint.co.kr/css/style.min.dev.css">
+
+  <!-- Local Update CSS -->
+  <link href="css/updated-style.css" rel="stylesheet" type="text/css">
+
+  <script src="https://store.buildingpoint.co.kr/js/index.js" type="text/javascript"></script>
+  <link href="https://store.buildingpoint.co.kr/css/index.css" rel="stylesheet" type="text/css">
+  <link href="https://store.buildingpoint.co.kr/css/goods-20201125.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="archive products_list sketchup-pro">
+  <div class="page_wrap">
+    <header>
+      <div class="inner_header">
+        <div class="nav">
+          <div class="logo" style="margin-right:30px !important;">
+            <img src="https://store.buildingpoint.co.kr/img/logo_02.png" alt="" onclick="location.href='index.jsp'">
+          </div>
+          <nav class="menu">
+            <div class="current">
+              <a href="goods.jsp?gc=18051600091">SketchUp</a>
+              <ul class="submenu">
+                <li><a href="goods.jsp?gc=18051600091">SketchUp Pro</a></li>
+                <li><a href="goods.jsp?gc=18051600130">SketchUp Studio</a></li>
+                <!-- <li><a href="promo.jsp">보상판매 프로모션</a></li> -->
+              </ul>
+            </div>
+            <div>
+              <a href="goods.jsp?gc=18051600092">SketchUp Extensions</a>
+              <ul class="submenu">
+                <li><a href="goods.jsp?gc=18051600092">FormworkModeler</a></li>
+                <li><a href="goods.jsp?gc=18051600094">RebarModeler</a></li>
+                <li><a href="goods.jsp?gc=18051600093&amp;go=18051600093001">PipeModeler</a></li>
+                <li><a href="goods.jsp?gc=18051600093&amp;go=18051600093002">DuctModeler</a></li>
+                <li><a href="goods.jsp?gc=18051600131">S-PLUS</a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="goods.jsp?gc=18051600125">Trimble Connect</a>
+              <ul class="submenu">
+                <li><a href="goods.jsp?gc=18051600125">Trimble Connect Business</a></li>
+                <li><a href="goods.jsp?gc=18051600126">Trimble Connect Business Premium</a></li>
+                <li><a href="goods.jsp?gc=18051600127">Trimble XR10 with HoloLens 2</a></li>
+                <li><a href="goods.jsp?gc=18051600128">Trimble XR10 with HoloLens 2 + TCH</a></li>
+                <li><a href="goods.jsp?gc=18051600129">Trimble SiteVision + SiteVision App</a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="notice_license.jsp">라이선스 정책</a>
+              <ul class="submenu">
+                <li><a href="notice_license.jsp">라이선스 정책</a></li>
+                <!-- 클래식 판매종료 배경색 수정 : 20200616 -->
+                <li class="classic"><a href="store_goodbye.jsp">클래식 판매 종료</a></li>
+              </ul>
+            </div>
+
+          </nav>
+          <!-- 메뉴가 2개 이상인 경우 -->
+          <!--
+          <nav class="menu">
+            <div class="current"><a href="">SketchUp Pro</a></div>
+            <div>
+              <a href="product-list.php">Extensions</a>
+              <ul class="submenu">
+                <li><a href="">FormworkModeler</a></li>
+                <li><a href="">RebarModeler</a></li>
+                <li><a href="">PipeModeler</a></li>
+                <li><a href="">DuctModeler</a></li>
+              </ul>
+            </div>
+          </nav>
+    -->
+        </div>
+        <div class="search_wrap">
+          <div class="icon_wrap">
+
+            <div class="icon" onclick="javascript:openPopup_login();"><a href="#"><i class="fas fa-user"></i></a></div>
+
+            <div class="icon"><a href="cart.jsp"><i class="fas fa-shopping-cart"></i></a></div>
+
+            <div class="icon">
+              <form class="search" action="">
+                <input type="text" placeholder="Search">
+                <input type="submit" value="">
+                <label for="">
+                  <i class="fas fa-search"></i>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!------ 모바일 메뉴 추가작업 : 20200616 ------>
+      <div class="mobile_header">
+        <div class="logo">
+          <img src="https://store.buildingpoint.co.kr/img/logo_02.png" alt="" onclick="location.href='index.jsp'">
+        </div>
+        <div class="menu_trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <div class="current">
+          <a href="goods.jsp?gc=18051600091">SketchUp</a>
+          <ul class="submenu">
+            <li><a href="goods.jsp?gc=18051600091">SketchUp Pro</a></li>
+            <li><a href="goods.jsp?gc=18051600130">SketchUp Studio</a></li>
+            <!--  <li><a href="promo.jsp">보상판매 프로모션</a></li> -->
+          </ul>
+        </div>
+        <div>
+          <a href="goods.jsp?gc=18051600092">SketchUp Extensions</a>
+          <ul class="submenu">
+            <li><a href="goods.jsp?gc=18051600092">FormworkModeler</a></li>
+            <li><a href="goods.jsp?gc=18051600094">RebarModeler</a></li>
+            <li><a href="goods.jsp?gc=18051600093&amp;go=18051600093001">PipeModeler</a></li>
+            <li><a href="goods.jsp?gc=18051600093&amp;go=18051600093002">DuctModeler</a></li>
+            <li><a href="goods.jsp?gc=18051600131">S-PLUS</a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="goods.jsp?gc=18051600092">Trimble Connect</a>
+          <ul class="submenu">
+            <li><a href="goods.jsp?gc=18051600125">Trimble Connect Business</a></li>
+            <li><a href="goods.jsp?gc=18051600126">Trimble Connect Business Premium</a></li>
+            <li><a href="goods.jsp?gc=18051600127">Trimble XR10 with HoloLens 2</a></li>
+            <li><a href="goods.jsp?gc=18051600128">Trimble XR10 with HoloLens 2 + TCH</a></li>
+            <li><a href="goods.jsp?gc=18051600129">Trimble SiteVision + SiteVision App</a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="notice_license.jsp">라이선스 정책</a>
+          <ul class="submenu">
+            <li><a href="notice_license.jsp">라이선스 정책</a></li>
+            <li class="classic"><a href="store_goodbye.jsp">클래식 판매 종료</a></li>
+          </ul>
+        </div>
+        <div class="search_wrap">
+          <div class="icon_wrap">
+
+            <div class="icon" onclick="javascript:openPopup_login();"><a href="#"><i class="fas fa-user"></i></a></div>
+
+            <div class="icon"><a href="cart.jsp"><i class="fas fa-shopping-cart"></i></a></div>
+
+            <div class="icon">
+              <form class="search" action="">
+                <input type="text" placeholder="Search">
+                <input type="submit" value="">
+                <label for="">
+                  <i class="fas fa-search"></i>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="myCanvasNav" class="m_overlay" onclick="closeNav()"></div>
+      <!------ /. 모바일 메뉴 추가작업 : 20200616 ------>
+    </header>
+    <div class="page_wrap">
+      <section class="container">
+        <article class="container_inner">
+          <div class="swiper-container main_banner swiper-container-horizontal">
+
+            <div class="swiper-button-next swiper-button-white" tabindex="0" role="button" aria-label="Next slide"
+              aria-disabled="false"></div>
+            <div class="swiper-button-prev swiper-button-white swiper-button-disabled" tabindex="0" role="button"
+              aria-label="Previous slide" aria-disabled="true"></div>
+            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="2"
+                style="width: 1280px;">
+                <div class="slider_wrap" style="margin-top:10px;">
+                  <div class="slider01"
+                    style="background:url(https://store.buildingpoint.co.kr/img/bgimg-1116.png) no-repeat; background-position-x: right; padding: 100px 0 225px;">
+                    <div class="slier_inner">
+                      <img class="logo" src="https://store.buildingpoint.co.kr/img/logo_sketchup_pro_2021.png" alt=""
+                        style="margin-bottom:0;">
+                      <h2 style="font-size:44px; font-weight:normal; margin: 25px 0;">
+                        로고부터 새로워진 스케치업 2021<br>
+                        <b>전세계 동시 출시!</b>
+                      </h2>
+                      <p class="excerpt" style="font-size: 24px; margin-bottom:40px;">
+                        Change your 3D modeling game
+                      </p>
+                      <div class="btn_wrap">
+                        <div class="point_btn" onclick="location.href='goods.jsp?gc=18051600091'">
+                          구독하기 <img src="https://store.buildingpoint.co.kr/img/Rectangle-556-copy-2.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <nav class="dot swiper-pagination swiper-pagination-bullets"><span
+                class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span
+                class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></nav>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </article>
+      </section>
+
+      <!------///// 2021.07.06 섹션 추가 및 수정 /////----->
+
+      <!-- Promotion -->
+      <section class="container promotion">
+        <article class="container_inner">
+          <div class="grid_container products">
+            <div class="row_container row_1col">
+              <div class="col_container col_1">
+                <div class="page_title">
+                  <h2>Promotion</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row_container row_1col">
+              <div class="col_container col_1">
+                <img src="img/img_promo_dummy.jpg">
+              </div>
+            </div>
+            <!------- Row Container Start ------->
+            <div class="row_container row_4col jc-right">
+              <div class="col_container col_4">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600119'">
+                  <div class="image_container large-thumbnail">
+                    <img class="thumbnail" src="https://img.rflogix.com/geo/goods/package-Formwork.jpg?v=1.92">
+                  </div>
+                  <div class="content_wrap transparent">
+                    <h3 class="name">SketchUp pro 2021 Subscription <br>+ FormworkModeler</h3>
+                    <p class="excerpt">스케치업만의 고유한 Push/Pull 기능은 3D를 그릴 수 있는 가장 쉬운 방법을 제공하며 누구나 가장 쉽고
+                      빠르게 원하는 형태의 3D 모델링이 가능한 소프트웨어입니다.</p>
+                    <!-- <div class="price_wrap"><span class="sale">430,000원</span>430,000원/년</div> -->
+                    <div class="price_wrap"><span class="sale">460,000원</span> 437,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_4">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600120'">
+                  <div class="image_container large-thumbnail">
+                    <img class="thumbnail" src="https://img.rflogix.com/geo/goods/package-Pipe.jpg?v=1.92">
+                  </div>
+                  <div class="content_wrap transparent">
+                    <h3 class="name">SketchUp pro 2021 Subscription <br>+ PipeModeler</h3>
+                    <p class="excerpt">스케치업만의 고유한 Push/Pull 기능은 3D를 그릴 수 있는 가장 쉬운 방법을 제공하며 누구나 가장 쉽고
+                      빠르게 원하는 형태의 3D 모델링이 가능한 소프트웨어입니다.</p>
+                    <!-- <div class="price_wrap"><span class="sale">430,000원</span>430,000원/년</div> -->
+                    <div class="price_wrap"><span class="sale">460,000원</span> 437,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_4">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600121'">
+                  <div class="image_container large-thumbnail">
+                    <img class="thumbnail" src="https://img.rflogix.com/geo/goods/package-Duct.jpg?v=1.92">
+                  </div>
+                  <div class="content_wrap transparent">
+                    <h3 class="name">SketchUp pro 2021 Subscription <br>+ DuctModeler</h3>
+                    <p class="excerpt">스케치업만의 고유한 Push/Pull 기능은 3D를 그릴 수 있는 가장 쉬운 방법을 제공하며 누구나 가장 쉽고
+                      빠르게 원하는 형태의 3D 모델링이 가능한 소프트웨어입니다.</p>
+                    <!-- <div class="price_wrap"><span class="sale">430,000원</span>430,000원/년</div> -->
+                    <div class="price_wrap"><span class="sale">460,000원</span> 437,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_4">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600122'">
+                  <div class="image_container large-thumbnail">
+                    <img class="thumbnail" src="https://img.rflogix.com/geo/goods/package-Rebar.jpg?v=1.92">
+                  </div>
+                  <div class="content_wrap transparent">
+                    <h3 class="name">SketchUp pro 2021 Subscription <br>+ RebarModeler </h3>
+                    <p class="excerpt">스케치업만의 고유한 Push/Pull 기능은 3D를 그릴 수 있는 가장 쉬운 방법을 제공하며 누구나 가장 쉽고
+                      빠르게 원하는 형태의 3D 모델링이 가능한 소프트웨어입니다.</p>
+                    <div class="price_wrap"><span class="sale">960,000원</span> 912,000원/년</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------- Row Container End ------->
+          </div>
+        </article>
+      </section>
+
+      <!-- Extensions -->
+      <section class="container product_list">
+        <article class="container_inner">
+          <div class="grid_container products">
+            <div class="row_container row_1col">
+              <div class="col_container col_1">
+                <div class="page_title">
+                  <h2>Extensions</h2>
+                </div>
+              </div>
+            </div>
+            <!------- Row Container Start ------->
+            <div class="row_container row_3col">
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600092'">
+                  <div class="image_container">
+                    <img class="thumbnail" src="https://store.buildingpoint.co.kr/img/pdimg-FormworkModeler.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">FormworkModeler</h3>
+                    <p class="excerpt">
+                      스케치업만의 고유한 Push/Pull 기능은 3D를 그릴 수 있는 가장 쉬운
+                      방법을 제공하며 누구나 가장 쉽고 빠르게 원하는 형태의 3D 모델링이
+                      가능한 소프트웨어입니다.
+                    </p>
+                    <div class="price_wrap">100,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600094'">
+                  <div class="image_container">
+                    <img class="thumbnail" src="https://store.buildingpoint.co.kr/img/pdimg-RebarModeler.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">RebarModeler</h3>
+                    <p class="excerpt">
+                      리바모델러는 프레임모델러 골조객체를 활용하여 3D 철근 모델링 및
+                      물량산출을 정확하고 빠르게 할 수 있는 스케치업 Add-on 프로그램 입니다.
+                    </p>
+                    <div class="price_wrap">600,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire" onclick="location.href='goods.jsp?gc=18051600093'">
+                  <div class="image_container">
+                    <img class="thumbnail" src="https://store.buildingpoint.co.kr/img/pdimg-duct_pipe.gif">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">PipeModeler / DuctModeler</h3>
+                    <p class="excerpt">
+                      파이프모델러/덕트모델러는 건물의 배관/덕트모델링과 물량산출을 위한
+                      스케치업 Add-on 프로그램 입니다.
+                    </p>
+                    <div class="price_wrap">100,000원/년</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------- Row Container End ------->
+          </div>
+        </article>
+      </section>
+
+      <!-- SketchUp Class -->
+      <section class="container class_list">
+        <article class="container_inner">
+          <div class="grid_container classes">
+            <div class="row_container row_1col">
+              <div class="col_container col_1">
+                <div class="page_title">
+                  <h2>SketchUp Class</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row_container row_3col">
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire">
+                  <div class="image_container">
+                    <img class="thumbnail" src="img/img-list-01.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">SketchUp 기초과정</h3>
+                    <p class="excerpt">
+                      스케치업 UI 및 화면 구성, 모델링 및 편집도구 사용법과 대화상자 및 메뉴바를 이해하고, 그룹/컴포넌트 등의 객체 요소에 대한 무료 클래스 입니다.
+                    </p>
+                    <div class="detail_wrap">
+                      <div class="level">
+                        <div class="stars level_1">
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                        </div>
+                        <div class="_name">intermediate</div>
+                      </div>
+                      <div class="_number">3 course</div>
+                    </div>
+                    <div class="price_wrap">100,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire">
+                  <div class="image_container">
+                    <img class="thumbnail" src="img/img-list-02.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">건축설계 & 인테리어</h3>
+                    <p class="excerpt">
+                      2D 도면 기반의 모델링 프로세스 및 V-Ray를 활용한 투시도 제작 프로세스에 대한 클래스 입니다.
+                    </p>
+                    <div class="detail_wrap">
+                      <div class="level">
+                        <div class="stars level_3">
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                        </div>
+                        <div class="_name">intermediate</div>
+                      </div>
+                      <div class="_number">2 course</div>
+                    </div>
+                    <div class="price_wrap">120,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire">
+                  <div class="image_container">
+                    <img class="thumbnail" src="img/img-list-02.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">건설 & 토목</h3>
+                    <p class="excerpt">
+                      수치지도 기반 지형 모델링 및 토공량 산출에 대해 알아보고 다이나믹 컴포넌트를 이용한 구조물의 물량 및 수량 산출에 대해 학습 할 수 있습니다.
+                    </p>
+                    <div class="detail_wrap">
+                      <div class="level">
+                        <div class="stars level_1">
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                        </div>
+                        <div class="_name">intermediate</div>
+                      </div>
+                      <div class="_number">4 course</div>
+                    </div>
+                    <div class="price_wrap">120,000원/년</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row_container row_3col">
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire">
+                  <div class="image_container">
+                    <img class="thumbnail" src="img/img-list-01.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">SketchUp 기초과정</h3>
+                    <p class="excerpt">
+                      스케치업 UI 및 화면 구성, 모델링 및 편집도구 사용법과 대화상자 및 메뉴바를 이해하고, 그룹/컴포넌트 등의 객체 요소에 대한 무료 클래스 입니다.
+                    </p>
+                    <div class="detail_wrap">
+                      <div class="level">
+                        <div class="stars level_2">
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                        </div>
+                        <div class="_name">intermediate</div>
+                      </div>
+                      <div class="_number">3 course</div>
+                    </div>
+                    <div class="price_wrap">100,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire">
+                  <div class="image_container">
+                    <img class="thumbnail" src="img/img-list-02.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">건축설계 & 인테리어</h3>
+                    <p class="excerpt">
+                      2D 도면 기반의 모델링 프로세스 및 V-Ray를 활용한 투시도 제작 프로세스에 대한 클래스 입니다.
+                    </p>
+                    <div class="detail_wrap">
+                      <div class="level">
+                        <div class="stars level_2">
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                        </div>
+                        <div class="_name">intermediate</div>
+                      </div>
+                      <div class="_number">2 course</div>
+                    </div>
+                    <div class="price_wrap">120,000원/년</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col_container col_3">
+                <div class="module_wrap link_entire">
+                  <div class="image_container">
+                    <img class="thumbnail" src="img/img-list-02.jpg">
+                  </div>
+                  <div class="content_wrap">
+                    <h3 class="name">건설 & 토목</h3>
+                    <p class="excerpt">
+                      수치지도 기반 지형 모델링 및 토공량 산출에 대해 알아보고 다이나믹 컴포넌트를 이용한 구조물의 물량 및 수량 산출에 대해 학습 할 수 있습니다.
+                    </p>
+                    <div class="detail_wrap">
+                      <div class="level">
+                        <div class="stars level_3">
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                          <label class="fa fa-star"></label>
+                        </div>
+                        <div class="_name">intermediate</div>
+                      </div>
+                      <div class="_number">4 course</div>
+                    </div>
+                    <div class="price_wrap">120,000원/년</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!---------- /////.End 2021.07.06 섹션 추가 및 수정 /////---------->
+    </div>
+  </div>
+</body>
+
+</html>
