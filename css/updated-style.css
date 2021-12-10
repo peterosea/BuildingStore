@@ -1,5 +1,10 @@
 /*SCSS*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@media (min-width: 1820px) {
+  body {
+    padding-top: 68px;
+  }
+}
 li {
   list-style: none;
 }
@@ -65,6 +70,11 @@ li {
 header {
   /* The side navigation menu */
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+}
+@media (min-width: 1820px) {
+  header {
+    position: fixed;
+  }
 }
 @media only screen and (max-width: 960px) {
   header .inner_header {
@@ -341,6 +351,39 @@ body.sketchup-pro section.container.class_list .level {
 }
 body.sketchup-pro section.container.class_list .level ._name {
   padding-left: 8px;
+}
+
+.nav_wrap ul.container {
+  margin: 0;
+}
+.nav_wrap ul.container > li {
+  padding: 0;
+}
+.nav_wrap ul.container ul {
+  margin: 14px 0 5px;
+}
+.nav_wrap nav .title {
+  padding: 14px 10px;
+}
+.nav_wrap nav .title.toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_wrap nav .title.toggle i.fas {
+  transition: all 0.3s;
+}
+.nav_wrap nav .title.toggle.closed i.fas {
+  transform: rotateZ(180deg);
+}
+.nav_wrap ul.menu_list {
+  height: auto;
+  transition: all 0.3s;
+}
+.nav_wrap ul.menu_list.closed {
+  height: 2px;
+  margin: 0;
+  overflow: hidden;
 }
 
 body.products_list div,

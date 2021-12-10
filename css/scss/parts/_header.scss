@@ -1,5 +1,8 @@
 header {
   // 기존 메뉴 반응형 수정
+  @media (min-width: 1820px) {
+    position: fixed; //추천페이지에서 스크롤 할 때 상단 네비게이션 사라지는 오류 제거
+  }
   .inner_header {
     @include respond-to(medium) {
       display: none;

@@ -1,0 +1,34 @@
+.nav_wrap {
+  ul.container {
+    margin: 0;
+    > li {
+      padding: 0;
+    }
+    ul {
+      margin: 14px 0 5px;
+    }
+  }
+  nav .title {
+    padding: 14px 10px;
+    &.toggle {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      i.fas {
+        transition: all 0.3s;
+      }
+      &.closed i.fas {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+  ul.menu_list {
+    height: auto;
+    transition: all 0.3s;
+    &.closed {
+      height: 2px;
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+}
