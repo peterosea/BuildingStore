@@ -5,6 +5,12 @@
     padding-top: 68px;
   }
 }
+@media only screen and (max-width: 768px) {
+  body {
+    padding-top: 64px;
+  }
+}
+
 li {
   list-style: none;
 }
@@ -76,6 +82,9 @@ header {
     position: fixed;
   }
 }
+header .inner_header {
+  width: 96%;
+}
 @media only screen and (max-width: 960px) {
   header .inner_header {
     display: none;
@@ -91,9 +100,8 @@ header {
   header .inner_header .icon_wrap .icon:first-child > a {
     padding: 0 5px;
   }
-}
-@media only screen and (max-width: 1024px) {
   header .inner_header .nav .menu div > a {
+    width: auto !important;
     padding: 0 15px;
   }
 }
@@ -167,8 +175,6 @@ header .sidenav {
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
   /* Position and style the close button (top right corner) */
@@ -188,6 +194,13 @@ header .sidenav > div > a {
   font-weight: bold;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
+}
+header .sidenav > div:first-child {
+  padding-top: 3px;
+}
+header .sidenav > div:last-child {
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
 header .sidenav .submenu {
   padding: 10px 0;
@@ -236,9 +249,6 @@ header .sidenav .search_wrap .icon_wrap .icon .search input {
   width: auto;
 }
 @media only screen and (max-width: 480px) {
-  header .sidenav {
-    padding-top: 15px;
-  }
   header .sidenav a {
     font-size: 18px;
   }
@@ -262,9 +272,160 @@ header #myCanvasNav {
   transition: opacity 1s;
 }
 
+@media only screen and (max-width: 1280px) {
+  body.sketchup-pro .container.slider .container_inner {
+    width: 100%;
+  }
+}
+body.sketchup-pro .container:nth-of-type(1) {
+  margin-bottom: 0;
+}
+body.sketchup-pro .slider_wrap div[class*=slider] {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+@media only screen and (max-width: 1280px) {
+  body.sketchup-pro .slider_wrap div[class*=slider] {
+    background-size: 70%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  body.sketchup-pro .slider_wrap div[class*=slider] {
+    background-position: right -20px bottom !important;
+  }
+}
+body.sketchup-pro .slider_wrap .slier_inner {
+  align-items: flex-start;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body.sketchup-pro .slider_wrap .slier_inner > div {
+  font-size: 26px;
+}
+body.sketchup-pro .slider_wrap .slier_inner > div > img {
+  margin-bottom: 10px;
+}
+body.sketchup-pro .slider_wrap .slier_inner h2 {
+  font-size: 46px;
+  line-height: 1.2em;
+  font-weight: 900;
+  margin: 10px 0 20px;
+}
+body.sketchup-pro .slider_wrap .slier_inner h3 {
+  font-size: 32px;
+  line-height: 1.2em;
+  font-weight: 900;
+}
+body.sketchup-pro .slider_wrap .slier_inner p {
+  margin: 0;
+  font-size: 18px;
+}
+body.sketchup-pro .slider_wrap .slier_inner .btn_wrap {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  display: flex;
+  padding: 0;
+}
+@media only screen and (max-width: 1280px) {
+  body.sketchup-pro .slider_wrap .slier_inner {
+    height: 580px;
+    padding: 40px 60px;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner > div {
+    font-size: 20px;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner h2 {
+    font-size: 32px !important;
+  }
+}
+@media only screen and (max-width: 960px) {
+  body.sketchup-pro .slider_wrap .slier_inner {
+    height: 500px;
+    justify-content: flex-start;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner h3 {
+    font-size: 24px;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner p {
+    font-size: 16px;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner .btn_wrap {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body.sketchup-pro .slider_wrap .slier_inner {
+    height: 400px;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding: 40px;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner > div {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body.sketchup-pro .slider_wrap .slier_inner {
+    padding: 40px 20px;
+  }
+  body.sketchup-pro .slider_wrap .slier_inner p {
+    font-size: 14px;
+  }
+}
 body.sketchup-pro .slider_wrap .slider01 .point_btn,
 body.sketchup-pro .slider_wrap .slider02 .point_btn {
   align-items: center;
+}
+body.sketchup-pro .slider_wrap .slider01 .point_btn img,
+body.sketchup-pro .slider_wrap .slider02 .point_btn img {
+  margin-left: 20px;
+}
+@media only screen and (max-width: 768px) {
+  body.sketchup-pro .slider_wrap .slider01 .point_btn,
+body.sketchup-pro .slider_wrap .slider02 .point_btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  body.sketchup-pro .slider_wrap .slider01 .point_btn img,
+body.sketchup-pro .slider_wrap .slider02 .point_btn img {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body.sketchup-pro .swiper-button-black {
+    display: none;
+  }
+}
+body.sketchup-pro .swiper-wrapper + .swiper-pagination {
+  bottom: 5%;
+}
+body.sketchup-pro .swiper-wrapper + .swiper-pagination span {
+  margin: 0 3px;
+  border: 5px solid #777;
+}
+body.sketchup-pro .swiper-wrapper + .swiper-pagination:before {
+  margin-right: 10px;
+}
+body.sketchup-pro .swiper-wrapper + .swiper-pagination:after {
+  margin-left: 10px;
+}
+@media only screen and (max-width: 1280px) {
+  body.sketchup-pro .swiper-wrapper + .swiper-pagination {
+    left: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body.sketchup-pro .swiper-wrapper + .swiper-pagination {
+    left: 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body.sketchup-pro .swiper-wrapper + .swiper-pagination {
+    left: 20px;
+  }
 }
 body.sketchup-pro .page_title h2 {
   margin-bottom: 0;
