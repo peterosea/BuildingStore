@@ -1,25 +1,195 @@
 body.sketchup-pro {
+  .container.slider .container_inner {
+    @include respond-to(medium-large) {
+      width: 100%;
+    }
+  }
+
+  .container:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  // Slider
   .slider_wrap {
+    div[class*="slider"] {
+      padding: 0;
+      background-repeat: no-repeat;
+      background-size: 60%;
+
+      @include respond-to(medium-large) {
+        background-size: 70%;
+      }
+
+      @include respond-to(medium) {
+        background-position: right -20px bottom !important;
+      }
+
+      @include respond-to(small) {}
+    }
+
+    .slier_inner {
+      align-items: flex-start;
+      height: 640px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      >div {
+        font-size: 26px;
+
+        >img {
+          margin-bottom: 10px;
+        }
+      }
+
+      h2 {
+        font-size: 46px;
+        line-height: 1.2em;
+        font-weight: 900;
+        margin: 10px 0 20px;
+      }
+
+      h3 {
+        font-size: 32px;
+        line-height: 1.2em;
+        font-weight: 900;
+      }
+
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .btn_wrap {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        display: flex;
+        padding: 0;
+      }
+
+      @include respond-to(medium-large) {
+        height: 580px;
+        padding: 40px 60px;
+
+        >div {
+          font-size: 20px;
+        }
+
+        h2 {
+          font-size: 32px !important;
+        }
+      }
+
+      @include respond-to(medium) {
+        height: 500px;
+        justify-content: flex-start;
+
+        h3 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        .btn_wrap {
+          margin-top: 20px;
+        }
+      }
+
+      @include respond-to(small) {
+        height: 400px;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding: 40px;
+
+        >div {
+          font-size: 16px;
+        }
+      }
+
+      @include respond-to(mobile) {
+        padding: 40px 20px;
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
     // 슬라이드 버튼 CSS 수정
     .slider01 .point_btn,
     .slider02 .point_btn {
       align-items: center;
+
+      img {
+        margin-left: 20px;
+      }
+
+      @include respond-to(small) {
+        padding: 10px 14px;
+        font-size: 13px;
+
+        img {
+          margin-left: 10px;
+        }
+      }
     }
   }
+
+  .swiper-button-black {
+    @include respond-to(small) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper+.swiper-pagination {
+    bottom: 5%;
+
+    span {
+      margin: 0 3px;
+      border: 5px solid #777;
+    }
+
+    &:before {
+      margin-right: 10px;
+    }
+
+    &:after {
+      margin-left: 10px;
+    }
+
+    @include respond-to(medium-large) {
+      left: 60px;
+    }
+
+    @include respond-to(small) {
+      left: 40px;
+    }
+
+    @include respond-to(mobile) {
+      left: 20px;
+    }
+  }
+
   .page_title h2 {
     margin-bottom: 0;
   }
+
   //Extensions Section
   section.container {
+
     &.product_list,
     &.class_list {
       padding-top: 120px;
       padding-bottom: 80px;
+
       @include respond-to(medium) {
         padding-top: 80px;
         padding-bottom: 40px;
       }
     }
+
     &.promotion {
       @include respond-to(medium) {
         padding-top: 80px;
@@ -27,12 +197,14 @@ body.sketchup-pro {
       }
     }
   }
+
   section.container.product_list {
     .row_container.row_3col {
       @include respond-to(small) {
         margin-bottom: 0;
       }
     }
+
     .image_container {
       .thumbnail {
         @include respond-to(small) {
@@ -41,56 +213,70 @@ body.sketchup-pro {
       }
     }
   }
+
   section.container.class_list {
     border-top: 1px solid #e9e9e9;
+
     .row_container.row_3col {
       margin-bottom: 60px;
+
       @include respond-to(small) {
         margin-bottom: 0;
       }
     }
+
     .image_container {
       border: none;
+
       .thumbnail {
         width: 100%;
         height: 230px;
         object-fit: cover;
       }
     }
+
     .content_wrap {
       height: auto;
       border: none;
       padding: 40px 0 0;
+
       .name {
         font-size: 24px;
         font-weight: bold;
       }
+
       .excerpt {
         font-size: 14px;
         color: #888;
         line-height: 1.5;
         min-height: 90px;
+
         @include respond-to(small) {
           min-height: auto;
         }
       }
+
       .detail_wrap {
-        > * {
+        >* {
           color: #888;
         }
       }
+
       .price_wrap {
         margin-top: 30px;
       }
     }
+
     .detail_wrap {
       display: flex;
     }
+
     .level {
       display: flex;
       padding-right: 12px;
       border-right: 1px solid #ccc;
       margin-right: 12px;
+
       ._name {
         padding-left: 8px;
       }

@@ -1,9 +1,13 @@
 header {
+
   // 기존 메뉴 반응형 수정
   @media (min-width: 1820px) {
     position: fixed; //추천페이지에서 스크롤 할 때 상단 네비게이션 사라지는 오류 제거
   }
+
   .inner_header {
+    width: 96%;
+
     @include respond-to(medium) {
       display: none;
     }
@@ -12,16 +16,17 @@ header {
       .logo {
         margin-right: 35px;
       }
+
       .search_wrap .search input {
         width: 100px;
       }
-      .icon_wrap .icon:first-child > a {
+
+      .icon_wrap .icon:first-child>a {
         padding: 0 5px;
       }
-    }
 
-    @include respond-to(large) {
-      .nav .menu div > a {
+      .nav .menu div>a {
+        width: auto !important;
         padding: 0 15px;
       }
     }
@@ -36,9 +41,11 @@ header {
   // 모바일 메뉴 추가 CSS
   .mobile_header {
     display: none;
+
     @include respond-to(medium) {
       display: flex;
     }
+
     padding: 20px 30px;
     align-items: center;
     justify-content: space-between;
@@ -51,6 +58,7 @@ header {
       height: 20px;
       z-index: 10;
       cursor: pointer;
+
       span {
         display: inline-block;
         transition: all 0.4s;
@@ -61,45 +69,59 @@ header {
         height: 2px;
         background-color: #fff;
         border-radius: 0;
+
         &:nth-of-type(1) {
           top: 0;
         }
+
         &:nth-of-type(2) {
           top: 9px;
         }
+
         &:nth-of-type(3) {
           bottom: 0;
         }
       }
+
       &.active {
         span:nth-of-type(1) {
           transform: translateY(9px) rotate(-135deg);
         }
+
         span:nth-of-type(2) {
           opacity: 0;
         }
+
         span:nth-of-type(3) {
           transform: translateY(-9px) rotate(135deg);
         }
       }
     }
   }
+
   /* The side navigation menu */
   .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 9; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
     right: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
 
-    > div {
+    >div {
       &.current {
-        > a {
+        >a {
           background-color: #d2362f;
         }
 
@@ -107,7 +129,8 @@ header {
           background-color: #292929;
         }
       }
-      > a {
+
+      >a {
         font-size: 18px;
         color: #fff;
         display: flex;
@@ -116,7 +139,17 @@ header {
         border-top: 1px solid #333;
         border-bottom: 1px solid #333;
       }
+
+      &:first-child {
+        padding-top: 3px;
+      }
+
+      &:last-child {
+        margin-bottom: 40px;
+        margin-top: 30px;
+      }
     }
+
     .submenu {
       padding: 10px 0;
       margin: 0;
@@ -132,6 +165,7 @@ header {
           color: #808080;
           display: block;
           transition: 0.3s;
+
           /* When you mouse over the navigation links, change their color */
           &:hover {
             color: #f1f1f1;
@@ -149,21 +183,28 @@ header {
       margin-left: 50px;
     }
 
-    .search_wrap .icon_wrap {
-      flex-wrap: wrap;
-      justify-content: center;
-      .icon {
-        display: flex;
-        a {
-          padding: 20px;
-        }
-        .fa {
-          font-size: 21px;
-        }
-        .search {
-          margin-top: 10px;
-          input {
-            width: auto;
+    .search_wrap {
+      .icon_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .icon {
+          display: flex;
+
+          a {
+            padding: 20px;
+          }
+
+          .fa {
+            font-size: 21px;
+          }
+
+          .search {
+            margin-top: 10px;
+
+            input {
+              width: auto;
+            }
           }
         }
       }
@@ -171,7 +212,8 @@ header {
 
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     @include respond-to(mobile) {
-      padding-top: 15px;
+
+      // padding-top: 15px;
       a {
         font-size: 18px;
       }
