@@ -8,6 +8,7 @@ body.single.page,
 body.sketchup-pro,
 body.single.product_detail,
 body.cart {
+
   div,
   a,
   li,
@@ -25,31 +26,37 @@ body.cart {
   }
 
   .slider_wrap .point_btn,
-  .swiper-wrapper + .swiper-pagination span[class*="active"],
+  .swiper-wrapper+.swiper-pagination span[class*="active"],
   .swiper-pagination-bullet-active,
   .btn_grp div.payment,
   header .nav nav.menu div.current {
-    background-color: $colorNew !important;
+    background-color: $colorNew  !important;
   }
+
   header .nav nav.menu div.current:hover {
     background-color: #fff !important;
   }
+
   .btn_grp div.payment:hover {
     background-color: $colorNewHover;
   }
-  header .nav nav.menu div.current:hover > a,
+
+  header .nav nav.menu div.current:hover>a,
   header .nav nav.menu div:hover,
   header .nav nav.menu div.current:hover {
     color: $colorNew;
   }
+
   .page_license_wrap {
     .text_wrap_bg .text_container p .point_color {
       color: $colorNew;
     }
+
     .module_wrap.btn_container .point_btn {
-      background-color: $colorNew !important;
+      background-color: $colorNew  !important;
     }
   }
+
   .grid_container.products {
     .module_wrap {
       .image_container {
@@ -57,30 +64,37 @@ body.cart {
       }
     }
   }
+
   .module_wrap {
     .image_container {
       height: auto;
     }
+
     .transparent,
     .content_wrap {
       .price_wrap {
         color: $colorNew;
+
         &:before {
           background-color: $colorNew;
         }
       }
     }
   }
+
   // 장바구니/카트
   .page_content {
+
     .price i,
-    .integrated-total_price > div:last-child i {
+    .integrated-total_price>div:last-child i {
       color: $colorNew;
     }
   }
+
   .page_wrap .pop_container .btnInsertOrder {
     background: $colorNew;
   }
+
   // 추천페이지
   article.page_recommend_wrap {
     .row_container.check_cart_wrap {
@@ -88,22 +102,27 @@ body.cart {
         background-color: $colorNew;
       }
     }
+
     .products_wrap.row_container {
       li .price {
         color: $colorNew;
       }
+
       .btn_wrap {
         .btn_cart {
           background-color: $colorNew;
+
           &:hover {
             background-color: $colorNewHover;
           }
         }
+
         .btn_detail_pop:hover {
           background-color: $colorNew;
         }
       }
     }
+
     .popup_recommend .pop_container .pop_title h2 p span {
       color: $colorNew;
     }
@@ -116,53 +135,10 @@ body.archive.products_list {
     &:hover .thumbnail {
       width: auto;
     }
+
     .image_container .thumbnail {
       width: auto;
       max-height: 320px;
-    }
-  }
-}
-
-// 상품 상세페이지
-html .single.product_detail .container {
-  .product_wrap.container_inner {
-    max-width: 1000px;
-    padding: 0px;
-    .image_wrap.row_container {
-      justify-content: space-between;
-      .col_container.col_1_2 {
-        &:first-child {
-          max-width: 410px;
-        }
-        &:last-child {
-          max-width: 560px;
-          width: 100%;
-        }
-      }
-    }
-    div.image_container {
-      align-items: flex-start;
-      justify-content: flex-start;
-      .thumbnail {
-        width: auto;
-        max-width: 410px;
-      }
-    }
-    .pd_title h1 {
-      line-height: 1.2em;
-      font-family: "Lato", "Noto Sans KR", sans-serif;
-    }
-    .detail_info_container img {
-      width: auto;
-    }
-    div.options {
-      margin: 40px 0;
-      ul.info li {
-        margin-top: 0;
-      }
-      ul.years li .option {
-        height: 46px;
-      }
     }
   }
 }
