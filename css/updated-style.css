@@ -621,7 +621,7 @@ html .single.product_detail .container .product_wrap.container_inner div.options
 @media only screen and (max-width: 768px) {
   html .single.product_detail div.options ul.years li.item:nth-of-type(1) {
     order: unset;
-    width: auto;
+    width: 32%;
     box-sizing: border-box;
     flex-direction: column;
     justify-content: unset;
